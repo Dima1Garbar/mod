@@ -1,0 +1,55 @@
+.first_oval{
+    position: absolute;
+    background: black;
+    top: 1000px;
+    width: 100px;
+    height: 75px;
+    border-radius: 100%;
+    animation: second 5s linear infinite;
+}
+
+.second_oval{
+    position: absolute;
+    background: red;
+    width: 100px;
+    height: 75px;
+    border-radius: 100%;
+    animation: first 5s linear infinite;
+   } 
+
+
+@keyframes first {
+    0% {
+        
+        transform: translatex(0px) translatey(0px);
+    }
+    50% {
+        transform: rotate(360deg);
+        transform: translatex(1800px) translatey(1000px);
+
+    }
+    75%{
+        transform: translate(1300px) translate(500px)
+    }
+    100%{
+        transform: translate(1300px) translate(250px)
+    }
+}
+
+@keyframes second {
+    0% {
+        transform: translatex(0px) translatey(0px);
+        
+    }
+    50% {
+        transform: rotate(360deg);
+        transform: translatex(1800px) translatey(-1000px);
+
+    }
+    75%{
+        transform: translatex(1800px) translatey(-500px)
+    }
+    100%{
+        transform: translate(1300px) translate(-250px)
+    }
+}
